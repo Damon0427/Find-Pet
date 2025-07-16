@@ -3,7 +3,7 @@
 
 Submitted by: **Zicheng Tan**
 
-This web app: ** A web app powered by the Petfinder API, and use to find ur favorite pet**
+This web app: **A web app powered by the Petfinder API, and use to find ur favorite pet**
 
 Time spent: **14** hours spent in total
 
@@ -17,7 +17,7 @@ The following **required** functionality is completed:
 - [x] **`useEffect` React hook and `async`/`await` are used**
 - [x] **The app dashboard includes at least three summary statistics about the data** 
   - The app dashboard includes at least three summary statistics about the data, such as:
-    - *insert details here*
+    - *Total Pet,Dog count, and Cat count*
 - [x] **A search bar allows the user to search for an item in the fetched data**
   - The search bar **correctly** filters items in the list, only displaying items matching the search query
   - The list of results dynamically updates as the user types into the search bar
@@ -44,7 +44,7 @@ Here's a walkthrough of implemented user stories:
 <img src='find&pet/src/assets/showCase.gif' width="400px" title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with Imgur  
+GIF created with Imgur  (https://i.imgur.com/JSJThkD.gif)
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
