@@ -1,0 +1,140 @@
+#root {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 2rem;
+  color:black;
+}
+
+.sideBar{
+  background-color:#8d74c83c;
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.sideBar h3{
+  cursor: pointer;
+}
+h2{
+  font-size: 2rem;
+  padding-left: 30px;
+  color: black;
+}
+
+h3{
+  font-size: 2rem;
+  font-weight:150;
+  padding-left: 50px;
+  color: black;
+
+}
+.Main-Section{
+  top: 0;
+  left: 30%;
+  position: fixed;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+
+}
+.Main-Section .displayh2{
+  padding-left: 0 ;
+}
+.Main-Section input{
+  padding:  20 px 40px;
+}
+.Main-Screen{
+  position:fixed;
+  top: 0;
+  left: 20%;         
+  width: 80%;       
+  height: 100vh;     
+  overflow-y: auto;  
+  padding: 2rem;
+  box-sizing: border-box;
+  background-color: #f0f0f084; 
+}
+.Category-Section{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+.Category-Button{
+  margin-right: 20px;
+  width: 200px;
+  height: 100px;
+  padding: 20px 40px;
+}
+.Search-Input{
+  width: 100%;
+  padding: 20px 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  background-color: #dfdfdf;
+}
+.Search-Input::placeholder {
+  color: #201d1db0; 
+
+}
+.Pet-List{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+.Pet-Cell{
+  width: 200px;
+  height: 330px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fff; 
+}
+
+.Pet-Cell .petName{
+  padding-left: 0px;
+  font-size: 1.3rem;
+  font-weight: lighter;
+}
+.tag {
+  background-color: #e0f7fa;
+  color: #00796b;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+.petImage{
+ width: 100%;
+ height: 150px;
+ object-fit:contain;
+ border-radius: 8px ;
+}
+
+.info-button{
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background-color: #91bde9;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.Dashboard-Summary{
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+  font-size: 2rem;
+  font-weight: 200;
+}
