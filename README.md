@@ -2,7 +2,7 @@
 
 Submitted by: **Zicheng Tan**
 
-This web app: ** a place to find ur dream pet! **
+This web app: **a place to find ur dream pet!**
 
 Time spent: **8** hours spent in total
 
@@ -56,9 +56,11 @@ GIF created with Imgur
 
 Describe any challenges encountered while building the app.
 
+I have trouble with setting the css
+
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [Zicheng]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
