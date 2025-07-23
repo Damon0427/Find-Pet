@@ -1,11 +1,10 @@
 import { useState,useEffect } from 'react'
-import SideBar from './Components/sideBar'
 import './App.css'
 import Category from './Components/Category'
 import PetCell from './Components/petCell'
-const ACCESS_KEY = import.meta.env.VITE_APP_ACCESS_KEY;
-const SECRET_KEY = import.meta.env.VITE_APP_SECRET_KEY;
-
+import { getToken } from './helper/auth';
+import React from 'react';
+import Graph from './Routes/graph';
 function App() {
   const types = ['Dog','Cat','Other Pets']
   const [Search, setSearch] = useState('')
@@ -13,28 +12,14 @@ function App() {
   const [category, setCategory] = useState('')
 
   useEffect(() => {
-    const controller = new AbortController();
-    console.log(ACCESS_KEY, SECRET_KEY);
-    async function fetchData() {
-      const body = new URLSearchParams({
-        grant_type: 'client_credentials',
-        client_id: ACCESS_KEY,
-        client_secret: SECRET_KEY
-      });
 
-      const response = await fetch ('https://api.petfinder.com/v2/oauth2/token', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: body.toString()
-      });
-      const data = await response.json();
-      const accessToken = data.access_token
+    async function fetchData() {
+
+      const token = await getToken();
       const petResponse = await fetch('https://api.petfinder.com/v2/animals', {
         method: 'GET',
         headers: {
-          'Authorization': `Bearer ${accessToken}`,
+          'Authorization': `Bearer ${token}`,
         }
       })
       const petData = await petResponse.json();
@@ -66,9 +51,7 @@ function App() {
   return (
     <>
 
-    <div className='Main-Section'> 
-      <SideBar></SideBar>
-    </div>
+
     <div className='Main-Screen'>
       <h2 className='displayh2'>Find Your Pet:</h2>
             <input 
@@ -89,8 +72,11 @@ function App() {
         ))
       }
       </div>
-
+      <div className="Graph-Section">
+        <Graph pets={pets} />
+      </div>
       <hr />
+      
       <h2 className='displayh2'>Result:</h2>
       {pets &&
           <div className="Dashboard-Summary">
@@ -109,6 +95,7 @@ function App() {
             <p>No pets found.</p>
           )}
         </div>
+
       
     </div>
     </>
